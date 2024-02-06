@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../styles/det_ship_rev.css";
+import "../../styles/size_ship_rev.css";
 import downarrow from "../../../images/down_arrow.png";
 import uparrow from "../../../images/up_arrow.png";
 import rating from "../../../images/4.8_star_rating.png";
@@ -9,8 +9,7 @@ let expandedReview2 = "expReviews2";
 let normalShipping = "shipping";
 let expandedShipping = "expShipping";
 
-const Det_Ship_Rev = () => {
-  const [currentReviewID, setReviewID] = useState(normalReview);
+const Size_Ship_Rev = () => {
   const [currentSizeArrow, setSizeArrow] = useState(downarrow);
   const [currentShipArrow, setShipArrow] = useState(downarrow);
   const [currentRevArrow, setRevArrow] = useState(downarrow);
@@ -31,10 +30,6 @@ const Det_Ship_Rev = () => {
         : "downarrow-shipping"
     );
 
-    setReviewID((prevID) =>
-      prevID === normalReview ? expandedReview2 : normalReview
-    );
-
     setSizeParagraphVisibility((prevVisibility) => !prevVisibility);
   };
 
@@ -43,9 +38,6 @@ const Det_Ship_Rev = () => {
       prevArrow === downarrow ? uparrow : downarrow
     );
     setShipParagraphVisibility((prevVisibility) => !prevVisibility);
-    setReviewID((prevID) =>
-      prevID === normalReview ? expandedReview : normalReview
-    );
   };
   const reviewChangeArrow = () => {
     setRevArrow((prevArrow) => (prevArrow === downarrow ? uparrow : downarrow));
@@ -55,7 +47,7 @@ const Det_Ship_Rev = () => {
     <>
       <div id="det_ship_rev">
         <div id="size_and_fit">
-          <p>Size & Fit</p>
+          <div>Size & Fit</div>
           <div>
             <img
               onClick={sizeChangeArrow}
@@ -101,7 +93,7 @@ const Det_Ship_Rev = () => {
           </div>
         </div>
 
-        <div id={currentReviewID}>
+        <div id={normalReview}>
           <div>Reviews (173)</div>
           <p>
             <img className="star" src={`${rating}`} alt="star" />
@@ -115,26 +107,22 @@ const Det_Ship_Rev = () => {
             />
             {currentRevArrow === uparrow ? (
               <div className="revPar">
-                <span>Write a Review</span><br></br><br></br> 
-                
-                
+                <span>Write a Review</span>
+                <br></br>
+                <br></br>
                 Awesome shoes!<br></br>
-                loretor519667877 - Jan 28, 2024
-                Perfectly awesome pair of shoes<br></br><br></br>
-
-
-                Shoes
-                Leairah52cb098261ca4e868c08b70a05c0fbd4<br></br>
-                - Jan 23, 2024<br></br>
-                I like them I also want more jordan 4's on this app<br></br>
-                and university blue.<br></br><br></br>
-
-
-                Classic like always<br></br> 
+                loretor519667877 - Jan 28, 2024 Perfectly awesome pair of shoes
+                <br></br>
+                <br></br>
+                Shoes Leairah52cb098261ca4e868c08b70a05c0fbd4<br></br>- Jan 23,
+                2024<br></br>I like them I also want more jordan 4's on this app
+                <br></br>
+                and university blue.<br></br>
+                <br></br>
+                Classic like always<br></br>
                 Michael677065232 - Jan 23, 2024<br></br>
-                Nice and clean, Classic like always<br></br><br></br>
-                
-                
+                Nice and clean, Classic like always<br></br>
+                <br></br>
                 <span>More Reviews</span>
               </div>
             ) : null}
@@ -145,4 +133,4 @@ const Det_Ship_Rev = () => {
   );
 };
 
-export default Det_Ship_Rev;
+export default Size_Ship_Rev;

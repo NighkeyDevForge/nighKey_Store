@@ -1,7 +1,7 @@
 import ImageGallery from "./Main/ImageGallery.jsx";
 import PurchaseInfo from "./Main/PurchaseInfo.jsx";
 import "./../styles/main.css";
-import Det_Ship_Rev from "./Main/Det_Ship_Rev.jsx";
+import Det_Ship_Rev from "./Main/Size_Ship_Rev.jsx";
 
 const Main = (props) => {
 
