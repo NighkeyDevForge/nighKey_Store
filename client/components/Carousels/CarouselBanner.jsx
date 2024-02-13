@@ -42,7 +42,7 @@ const CarouselBanner = (props) => {
         ]
     };
     return (
-        <div>
+        <div className="carouselBanner">
         <Slider {...settings}>
           <div className="bannerCard">
             <div className="bannerTextContainer">
