@@ -24,7 +24,7 @@ const ModalBody1 = (props) => {
                   <div className="oneItemContainer" key={index}>
                     <h4 className="howOthersName">{item.name}</h4>
                     <h4 className="howOthersType">{item.type}</h4>
-                      < img src={item.image} alt={item.name} />
+                      < img loading="lazy" src={item.image} alt={item.name} />
                   </div>
                 ))}
               </ul>
